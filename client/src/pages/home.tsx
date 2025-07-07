@@ -458,7 +458,7 @@ export default function Home() {
                   </div>
                   <div className="mt-4 lg:mt-0">
                     <Badge className="bg-gradient-to-r from-green-500 to-teal-500 text-white hover:from-green-600 hover:to-teal-600 shadow-md px-4 py-2">
-                      Oct 2023 - Present
+                      May 2023 - Present
                     </Badge>
                   </div>
                 </div>
@@ -523,7 +523,7 @@ export default function Home() {
                       </div>
                       <h4 className="text-xl font-semibold text-slate-800 dark:text-white">Propel (Rewards & Recognition Platform)</h4>
                     </div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium">Oct 2023 - Oct 2024</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium">May 2023 - Oct 2024</p>
                     <ul className="space-y-3 text-slate-600 dark:text-slate-300">
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
