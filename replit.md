@@ -94,6 +94,10 @@ The application follows a modern full-stack architecture with clear separation b
 ```
 Changelog:
 - July 07, 2025. Initial setup
+- July 07, 2025. Enhanced "My Journey" section with professional timeline design
+- July 07, 2025. Added live demo links for Mobile Bazzar and Pokemon projects
+- July 07, 2025. Created frontend-only deployment configurations
+- July 07, 2025. Prepared comprehensive LinkedIn project descriptions
 ```
 
 ## User Preferences
