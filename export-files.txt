@@ -1,0 +1,39 @@
+PORTFOLIO PROJECT FILES FOR GITHUB UPLOAD
+==========================================
+
+Your portfolio is ready! Here are the main files you need to recreate on GitHub:
+
+MAIN PROJECT FILES:
+- package.json (dependencies and scripts)
+- README.md (project documentation)
+- .gitignore (files to exclude)
+- tsconfig.json (TypeScript config)
+- vite.config.ts (build configuration)
+- tailwind.config.ts (styling config)
+
+CLIENT FOLDER:
+- client/index.html
+- client/src/App.tsx (main app component)
+- client/src/main.tsx (entry point)
+- client/src/index.css (global styles)
+- client/src/pages/home.tsx (your portfolio page)
+- client/src/components/ (UI components folder)
+- client/src/hooks/ (custom hooks)
+- client/src/lib/ (utilities)
+
+SERVER FOLDER:
+- server/index.ts (backend server)
+- server/routes.ts (API routes)
+- server/storage.ts (data storage)
+- server/vite.ts (development setup)
+
+SHARED FOLDER:
+- shared/schema.ts (data types)
+
+To recreate on GitHub:
+1. Create new repository on GitHub.com
+2. Create these folders and files
+3. Copy the content from each file in Replit
+4. Commit and push to GitHub
+
+Alternative: Use Replit's Git integration from the left sidebar if available.
