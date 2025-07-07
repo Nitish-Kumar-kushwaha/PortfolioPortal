@@ -727,12 +727,20 @@ export default function Home() {
                   <Badge className="bg-black text-white hover:bg-gray-800">Next.js</Badge>
                   <Badge className="bg-blue-600 text-white hover:bg-blue-700">TypeScript</Badge>
                 </div>
-                <div className="flex justify-between">
-                  <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0">
-                    <a href="https://github.com/Nitish-Kumar-kushwaha/MobileBazzar" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                      View Project <ExternalLink className="w-4 h-4 ml-1" />
-                    </a>
-                  </Button>
+                <div className="flex justify-between items-center">
+                  <div className="flex space-x-2">
+                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
+                      <a href="https://mobile-bazzar.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Live Demo <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
+                    </Button>
+                    <span className="text-slate-400">|</span>
+                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
+                      <a href="https://github.com/Nitish-Kumar-kushwaha/MobileBazzar" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Code <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
+                    </Button>
+                  </div>
                   <Button variant="ghost" size="sm" className="text-slate-600 hover:text-slate-800 p-0">
                     <a href="https://github.com/Nitish-Kumar-kushwaha/MobileBazzar" target="_blank" rel="noopener noreferrer">
                       <Github className="w-5 h-5" />
@@ -760,12 +768,20 @@ export default function Home() {
                   <Badge className="bg-black text-white hover:bg-gray-800">Next.js</Badge>
                   <Badge className="bg-blue-600 text-white hover:bg-blue-700">TypeScript</Badge>
                 </div>
-                <div className="flex justify-between">
-                  <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0">
-                    <a href="https://github.com/Nitish-Kumar-kushwaha/Pokemon" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                      View Project <ExternalLink className="w-4 h-4 ml-1" />
-                    </a>
-                  </Button>
+                <div className="flex justify-between items-center">
+                  <div className="flex space-x-2">
+                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
+                      <a href="https://portfolio-portal-4dxv.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Live Demo <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
+                    </Button>
+                    <span className="text-slate-400">|</span>
+                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
+                      <a href="https://github.com/Nitish-Kumar-kushwaha/Pokemon" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Code <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
+                    </Button>
+                  </div>
                   <Button variant="ghost" size="sm" className="text-slate-600 hover:text-slate-800 p-0">
                     <a href="https://github.com/Nitish-Kumar-kushwaha/Pokemon" target="_blank" rel="noopener noreferrer">
                       <Github className="w-5 h-5" />
