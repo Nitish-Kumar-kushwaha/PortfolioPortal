@@ -56,10 +56,19 @@ export default function Home() {
       return;
     }
 
-    // Simulate form submission
+    // Create email content
+    const emailSubject = encodeURIComponent(`Portfolio Contact: ${subject}`);
+    const emailBody = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+    
+    // Open default email client
+    const mailtoLink = `mailto:nitishkumarkushwaha2509@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    window.open(mailtoLink, '_blank');
+
     toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      title: "Email client opened!",
+      description: "Your message has been prepared in your default email client.",
     });
 
     // Reset form
@@ -966,13 +975,48 @@ export default function Home() {
                       />
                     </div>
 
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transform hover:scale-105 transition-all duration-200"
-                    >
-                      <Send className="w-4 h-4 mr-2" />
-                      Send Message
-                    </Button>
+                    <div className="space-y-3">
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transform hover:scale-105 transition-all duration-200"
+                      >
+                        <Send className="w-4 h-4 mr-2" />
+                        Send via Email Client
+                      </Button>
+                      
+                      <div className="text-center">
+                        <p className="text-sm text-slate-500 mb-2">Or reach out directly:</p>
+                        <div className="flex justify-center space-x-4">
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => window.open('mailto:nitishkumarkushwaha2509@gmail.com', '_blank')}
+                            className="text-xs"
+                          >
+                            <Mail className="w-3 h-3 mr-1" />
+                            Email
+                          </Button>
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => window.open('https://linkedin.com/in/nitishkumarkushwaha', '_blank')}
+                            className="text-xs"
+                          >
+                            <Linkedin className="w-3 h-3 mr-1" />
+                            LinkedIn
+                          </Button>
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => window.open('tel:+918429128085', '_blank')}
+                            className="text-xs"
+                          >
+                            <Phone className="w-3 h-3 mr-1" />
+                            Call
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
                   </form>
                 </CardContent>
               </Card>
