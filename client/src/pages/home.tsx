@@ -531,12 +531,12 @@ export default function Home() {
 
                 <div className="grid grid-cols-2 gap-6 mb-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-slate-800 mb-1">250+</div>
-                    <div className="text-sm text-slate-600">Problems Solved</div>
+                    <div className="text-3xl font-bold text-green-600 mb-1">49%</div>
+                    <div className="text-sm text-slate-600">Acceptance Rate</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-1">85%</div>
-                    <div className="text-sm text-slate-600">Acceptance Rate</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-1">716K+</div>
+                    <div className="text-sm text-slate-600">Global Ranking</div>
                   </div>
                 </div>
 
@@ -545,28 +545,36 @@ export default function Home() {
                     <span className="text-slate-700">Easy</span>
                     <div className="flex items-center">
                       <div className="w-24 h-2 bg-gray-200 rounded-full mr-3">
-                        <div className="w-20 h-2 bg-green-500 rounded-full"></div>
+                        <div className="w-4 h-2 bg-green-500 rounded-full"></div>
                       </div>
-                      <span className="text-sm text-slate-600">120/150</span>
+                      <span className="text-sm font-semibold text-slate-800">53</span>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Medium</span>
                     <div className="flex items-center">
                       <div className="w-24 h-2 bg-gray-200 rounded-full mr-3">
-                        <div className="w-16 h-2 bg-yellow-500 rounded-full"></div>
+                        <div className="w-12 h-2 bg-yellow-500 rounded-full"></div>
                       </div>
-                      <span className="text-sm text-slate-600">110/200</span>
+                      <span className="text-sm font-semibold text-slate-800">114</span>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Hard</span>
                     <div className="flex items-center">
                       <div className="w-24 h-2 bg-gray-200 rounded-full mr-3">
-                        <div className="w-8 h-2 bg-red-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                       </div>
-                      <span className="text-sm text-slate-600">20/80</span>
+                      <span className="text-sm font-semibold text-slate-800">9</span>
                     </div>
+                  </div>
+                </div>
+
+                {/* Total Count */}
+                <div className="mt-6 pt-4 border-t border-slate-200">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-slate-800 mb-1">176</div>
+                    <div className="text-sm text-slate-600">Total Problems Solved</div>
                   </div>
                 </div>
 
@@ -603,27 +611,35 @@ export default function Home() {
 
                 <div className="grid grid-cols-2 gap-6 mb-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-slate-800 mb-1">180+</div>
-                    <div className="text-sm text-slate-600">Problems Solved</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-1">52</div>
+                    <div className="text-sm text-slate-600">POTD Streak</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-1">45</div>
-                    <div className="text-sm text-slate-600">POTD Streak</div>
+                    <div className="text-3xl font-bold text-green-600 mb-1">450+</div>
+                    <div className="text-sm text-slate-600">Institute Rank</div>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Data Structures</span>
-                    <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">75 solved</Badge>
+                    <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">82 solved</Badge>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Algorithms</span>
-                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">65 solved</Badge>
+                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">71 solved</Badge>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Interview Prep</span>
-                    <Badge className="bg-green-100 text-green-700 hover:bg-green-100">40 solved</Badge>
+                    <Badge className="bg-green-100 text-green-700 hover:bg-green-100">49 solved</Badge>
+                  </div>
+                </div>
+
+                {/* Total Count */}
+                <div className="mt-6 pt-4 border-t border-slate-200">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-slate-800 mb-1">202</div>
+                    <div className="text-sm text-slate-600">Total Problems Solved</div>
                   </div>
                 </div>
 
@@ -655,7 +671,7 @@ export default function Home() {
                     </div>
                     <h4 className="font-semibold text-slate-800">Consistent Solver</h4>
                   </div>
-                  <p className="text-slate-600 text-sm">Maintained daily coding practice with 400+ problems solved across platforms</p>
+                  <p className="text-slate-600 text-sm">Maintained daily coding practice with 378+ problems solved across platforms</p>
                 </CardContent>
               </Card>
 
