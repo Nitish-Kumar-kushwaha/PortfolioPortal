@@ -126,4 +126,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-⭐ If you like this portfolio, please consider giving it a star on GitHub!
+⭐ If you like this portfolio, please consider giving it a star on GitHub!# PortfolioPortal
