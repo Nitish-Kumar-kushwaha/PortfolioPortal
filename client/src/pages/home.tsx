@@ -645,101 +645,120 @@ export default function Home() {
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Featured Projects</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Showcase of my recent work and personal projects (Coming Soon)
+              Showcase of my recent work and personal projects
             </p>
           </div>
 
-          {/* Project Placeholder Cards */}
+          {/* Project Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Mobile Bazzar Project */}
             <Card className="shadow-lg border border-slate-200 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
               <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
                 <div className="text-center">
-                  <Laptop className="w-16 h-16 text-blue-600 mx-auto mb-2" />
-                  <p className="text-blue-700 font-medium">Enterprise Dashboard</p>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Enterprise Dashboard</h3>
-                <p className="text-slate-600 mb-4">A comprehensive dashboard built with React.js and Spring Boot for data visualization and analytics.</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">React.js</Badge>
-                  <Badge className="bg-green-100 text-green-700 hover:bg-green-100">Spring Boot</Badge>
-                  <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">PostgreSQL</Badge>
-                </div>
-                <div className="flex justify-between">
-                  <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0">
-                    View Project <ExternalLink className="w-4 h-4 ml-1" />
-                  </Button>
-                  <Button variant="ghost" size="sm" className="text-slate-600 hover:text-slate-800 p-0">
-                    <Github className="w-5 h-5" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-lg border border-slate-200 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
-              <div className="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-16 h-16 text-green-600 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z" clipRule="evenodd" />
+                  <svg className="w-16 h-16 text-blue-600 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zM14 21h-4v-1h4v1zm3.25-3H6.75V4h10.5v14z"/>
                   </svg>
-                  <p className="text-green-700 font-medium">E-Commerce Platform</p>
+                  <p className="text-blue-700 font-medium">Mobile E-Commerce</p>
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">E-Commerce Platform</h3>
-                <p className="text-slate-600 mb-4">A full-stack e-commerce solution with payment integration and real-time inventory management.</p>
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Mobile Bazzar</h3>
+                <p className="text-slate-600 mb-4">Dynamic e-commerce platform for mobile products with advanced search, sorting, detailed product views, and seamless cart functionality. Built with modern React.js and Next.js.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">React.js</Badge>
-                  <Badge className="bg-green-100 text-green-700 hover:bg-green-100">Node.js</Badge>
-                  <Badge className="bg-orange-100 text-orange-700 hover:bg-orange-100">MongoDB</Badge>
+                  <Badge className="bg-black text-white hover:bg-gray-800">Next.js</Badge>
+                  <Badge className="bg-blue-600 text-white hover:bg-blue-700">TypeScript</Badge>
                 </div>
                 <div className="flex justify-between">
                   <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0">
-                    View Project <ExternalLink className="w-4 h-4 ml-1" />
+                    <a href="https://github.com/Nitish-Kumar-kushwaha/MobileBazzar" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      View Project <ExternalLink className="w-4 h-4 ml-1" />
+                    </a>
                   </Button>
                   <Button variant="ghost" size="sm" className="text-slate-600 hover:text-slate-800 p-0">
-                    <Github className="w-5 h-5" />
+                    <a href="https://github.com/Nitish-Kumar-kushwaha/MobileBazzar" target="_blank" rel="noopener noreferrer">
+                      <Github className="w-5 h-5" />
+                    </a>
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
+            {/* Pokemon Project */}
             <Card className="shadow-lg border border-slate-200 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
-              <div className="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+              <div className="h-48 bg-gradient-to-br from-red-100 to-yellow-200 flex items-center justify-center">
                 <div className="text-center">
-                  <CheckCircle className="w-16 h-16 text-purple-600 mx-auto mb-2" />
-                  <p className="text-purple-700 font-medium">Task Management App</p>
+                  <svg className="w-16 h-16 text-red-600 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10Z"/>
+                  </svg>
+                  <p className="text-red-700 font-medium">Pokemon Explorer</p>
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Task Management App</h3>
-                <p className="text-slate-600 mb-4">A collaborative task management application with real-time updates and team collaboration features.</p>
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Pokemon</h3>
+                <p className="text-slate-600 mb-4">Explore Pokémon types with ease! Features detailed descriptions, seamless pagination, and captivating interface. Powered by Next.js for quick loading and React for interactivity.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">Angular</Badge>
-                  <Badge className="bg-green-100 text-green-700 hover:bg-green-100">Java</Badge>
-                  <Badge className="bg-red-100 text-red-700 hover:bg-red-100">Redis</Badge>
+                  <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">React</Badge>
+                  <Badge className="bg-black text-white hover:bg-gray-800">Next.js</Badge>
+                  <Badge className="bg-blue-600 text-white hover:bg-blue-700">TypeScript</Badge>
                 </div>
                 <div className="flex justify-between">
                   <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0">
-                    View Project <ExternalLink className="w-4 h-4 ml-1" />
+                    <a href="https://github.com/Nitish-Kumar-kushwaha/Pokemon" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      View Project <ExternalLink className="w-4 h-4 ml-1" />
+                    </a>
                   </Button>
                   <Button variant="ghost" size="sm" className="text-slate-600 hover:text-slate-800 p-0">
-                    <Github className="w-5 h-5" />
+                    <a href="https://github.com/Nitish-Kumar-kushwaha/Pokemon" target="_blank" rel="noopener noreferrer">
+                      <Github className="w-5 h-5" />
+                    </a>
                   </Button>
                 </div>
               </CardContent>
             </Card>
-          </div>
 
-          {/* Coming Soon Notice */}
-          <div className="text-center mt-12 animate-on-scroll">
-            <div className="inline-flex items-center px-6 py-3 bg-blue-100 text-blue-800 rounded-full">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-              </svg>
-              More projects coming soon! Check back for updates.
-            </div>
+            {/* Sporty Shoes Project */}
+            <Card className="shadow-lg border border-slate-200 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
+              <div className="h-48 bg-gradient-to-br from-green-100 to-blue-200 flex items-center justify-center">
+                <div className="text-center">
+                  <svg className="w-16 h-16 text-green-600 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M2,18H7V20H17V18H22L20,8H19V7A2,2 0 0,0 17,5H7A2,2 0 0,0 5,7V8H4L2,18M7,7H17V8H7V7M4.5,10H19.5L18.5,16H5.5L4.5,10Z"/>
+                  </svg>
+                  <p className="text-green-700 font-medium">Shoe Store</p>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Sporty Shoes</h3>
+                <p className="text-slate-600 mb-4">Full-stack sporty shoe e-commerce web app with sleek Next.js & React.js frontend, robust Spring Boot backend. TypeScript ensures bug-resistant, reliable codebase.</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">React.js</Badge>
+                  <Badge className="bg-black text-white hover:bg-gray-800">Next.js</Badge>
+                  <Badge className="bg-green-600 text-white hover:bg-green-700">Spring Boot</Badge>
+                  <Badge className="bg-orange-500 text-white hover:bg-orange-600">Java</Badge>
+                  <Badge className="bg-blue-600 text-white hover:bg-blue-700">TypeScript</Badge>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div className="flex space-x-2">
+                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
+                      <a href="https://github.com/Nitish-Kumar-kushwaha/sportyshoes" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Frontend <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
+                    </Button>
+                    <span className="text-slate-400">|</span>
+                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
+                      <a href="https://github.com/Nitish-Kumar-kushwaha/sport-shoes" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Backend <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
+                    </Button>
+                  </div>
+                  <Button variant="ghost" size="sm" className="text-slate-600 hover:text-slate-800 p-0">
+                    <a href="https://github.com/Nitish-Kumar-kushwaha/sportyshoes" target="_blank" rel="noopener noreferrer">
+                      <Github className="w-5 h-5" />
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
