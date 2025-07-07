@@ -850,44 +850,24 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
                     <Code className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-800">Programming Languages</h3>
+                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white">Programming Languages</h3>
                 </div>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Java</span>
-                      <span className="text-sm text-slate-500">95%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Java</span>
+                    <span className="skill-indicator skill-expert">Expert</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">JavaScript</span>
-                      <span className="text-sm text-slate-500">90%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[90%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">JavaScript</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">TypeScript</span>
-                      <span className="text-sm text-slate-500">85%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">TypeScript</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Ruby</span>
-                      <span className="text-sm text-slate-500">75%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[75%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Ruby</span>
+                    <span className="skill-indicator skill-intermediate">Intermediate</span>
                   </div>
                 </div>
               </CardContent>
@@ -901,44 +881,24 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-4">
                     <Laptop className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-800">Frameworks</h3>
+                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white">Frameworks</h3>
                 </div>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Spring Boot</span>
-                      <span className="text-sm text-slate-500">95%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Spring Boot</span>
+                    <span className="skill-indicator skill-expert">Expert</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">React.js</span>
-                      <span className="text-sm text-slate-500">90%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[90%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">React.js</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Angular</span>
-                      <span className="text-sm text-slate-500">85%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Angular</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Redux-Saga</span>
-                      <span className="text-sm text-slate-500">80%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[80%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Redux-Saga</span>
+                    <span className="skill-indicator skill-intermediate">Intermediate</span>
                   </div>
                 </div>
               </CardContent>
@@ -954,44 +914,24 @@ export default function Home() {
                       <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-800">Databases</h3>
+                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white">Databases</h3>
                 </div>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">PostgreSQL</span>
-                      <span className="text-sm text-slate-500">90%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[90%]"></div>
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">PostgreSQL</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">SQL</span>
-                      <span className="text-sm text-slate-500">95%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">SQL</span>
+                    <span className="skill-indicator skill-expert">Expert</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">JPA</span>
-                      <span className="text-sm text-slate-500">85%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">JPA</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">DBMS</span>
-                      <span className="text-sm text-slate-500">85%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">DBMS</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
                 </div>
               </CardContent>
@@ -1007,44 +947,24 @@ export default function Home() {
                       <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-800">Development Tools</h3>
+                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white">Development Tools</h3>
                 </div>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Kafka</span>
-                      <span className="text-sm text-slate-500">85%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Kafka</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Git</span>
-                      <span className="text-sm text-slate-500">95%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Git</span>
+                    <span className="skill-indicator skill-expert">Expert</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Postman</span>
-                      <span className="text-sm text-slate-500">90%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[90%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Postman</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">AWS S3</span>
-                      <span className="text-sm text-slate-500">75%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[75%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">AWS S3</span>
+                    <span className="skill-indicator skill-intermediate">Intermediate</span>
                   </div>
                 </div>
               </CardContent>
@@ -1060,44 +980,24 @@ export default function Home() {
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-800">Concepts</h3>
+                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white">Concepts</h3>
                 </div>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Microservices</span>
-                      <span className="text-sm text-slate-500">95%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Microservices</span>
+                    <span className="skill-indicator skill-expert">Expert</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">RESTful APIs</span>
-                      <span className="text-sm text-slate-500">95%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">RESTful APIs</span>
+                    <span className="skill-indicator skill-expert">Expert</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Design Patterns</span>
-                      <span className="text-sm text-slate-500">85%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Design Patterns</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Data Structures</span>
-                      <span className="text-sm text-slate-500">90%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[90%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Data Structures</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
                 </div>
               </CardContent>
@@ -1113,44 +1013,24 @@ export default function Home() {
                       <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-800">Tools & Systems</h3>
+                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white">Tools & Systems</h3>
                 </div>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Linux (Ubuntu)</span>
-                      <span className="text-sm text-slate-500">85%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Linux (Ubuntu)</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Windows</span>
-                      <span className="text-sm text-slate-500">95%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Windows</span>
+                    <span className="skill-indicator skill-expert">Expert</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Cloud Watch</span>
-                      <span className="text-sm text-slate-500">70%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[70%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Cloud Watch</span>
+                    <span className="skill-indicator skill-intermediate">Intermediate</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-slate-700 font-medium">Agile</span>
-                      <span className="text-sm text-slate-500">85%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2">
-                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">Agile</span>
+                    <span className="skill-indicator skill-advanced">Advanced</span>
                   </div>
                 </div>
               </CardContent>
@@ -1520,8 +1400,7 @@ export default function Home() {
             
             <div className="border-t border-slate-800 pt-8">
               <p className="text-slate-400 text-sm">
-                © 2024 Nitish Kumar Kushwaha. All rights reserved. | 
-                <span className="text-slate-300 ml-1">Designed with ❤️ using React.js & Tailwind CSS</span>
+                © 2024 Nitish Kumar Kushwaha. All rights reserved.
               </p>
             </div>
           </div>
