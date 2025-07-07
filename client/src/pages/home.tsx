@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
+import { ModeToggle } from "@/components/mode-toggle";
 import { 
   Mail, 
   Phone, 
@@ -87,44 +88,46 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md border-b border-slate-200 z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <h1 className="text-xl font-bold text-slate-800">NK</h1>
+              <h1 className="text-xl font-bold text-slate-800 dark:text-white">NK</h1>
             </div>
             
             {/* Desktop Navigation */}
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                <button onClick={() => scrollToSection('home')} className="hover:text-blue-600 transition-colors duration-200 font-medium">
+            <div className="hidden md:flex items-center space-x-8">
+              <div className="flex items-baseline space-x-8">
+                <button onClick={() => scrollToSection('home')} className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                   Home
                 </button>
-                <button onClick={() => scrollToSection('about')} className="hover:text-blue-600 transition-colors duration-200 font-medium">
+                <button onClick={() => scrollToSection('about')} className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                   About
                 </button>
-                <button onClick={() => scrollToSection('experience')} className="hover:text-blue-600 transition-colors duration-200 font-medium">
+                <button onClick={() => scrollToSection('experience')} className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                   Experience
                 </button>
-                <button onClick={() => scrollToSection('skills')} className="hover:text-blue-600 transition-colors duration-200 font-medium">
+                <button onClick={() => scrollToSection('skills')} className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                   Skills
                 </button>
-                <button onClick={() => scrollToSection('projects')} className="hover:text-blue-600 transition-colors duration-200 font-medium">
+                <button onClick={() => scrollToSection('projects')} className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                   Projects
                 </button>
-                <button onClick={() => scrollToSection('contact')} className="hover:text-blue-600 transition-colors duration-200 font-medium">
+                <button onClick={() => scrollToSection('contact')} className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                   Contact
                 </button>
               </div>
+              <ModeToggle />
             </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
+            {/* Mobile menu button and theme toggle */}
+            <div className="md:hidden flex items-center space-x-2">
+              <ModeToggle />
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-slate-600 hover:text-slate-900 focus:outline-none"
+                className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white focus:outline-none"
               >
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -134,24 +137,24 @@ export default function Home() {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-slate-200">
+          <div className="md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <button onClick={() => scrollToSection('home')} className="block px-3 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md transition-colors duration-200 w-full text-left">
+              <button onClick={() => scrollToSection('home')} className="block px-3 py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-colors duration-200 w-full text-left">
                 Home
               </button>
-              <button onClick={() => scrollToSection('about')} className="block px-3 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md transition-colors duration-200 w-full text-left">
+              <button onClick={() => scrollToSection('about')} className="block px-3 py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-colors duration-200 w-full text-left">
                 About
               </button>
-              <button onClick={() => scrollToSection('experience')} className="block px-3 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md transition-colors duration-200 w-full text-left">
+              <button onClick={() => scrollToSection('experience')} className="block px-3 py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-colors duration-200 w-full text-left">
                 Experience
               </button>
-              <button onClick={() => scrollToSection('skills')} className="block px-3 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md transition-colors duration-200 w-full text-left">
+              <button onClick={() => scrollToSection('skills')} className="block px-3 py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-colors duration-200 w-full text-left">
                 Skills
               </button>
-              <button onClick={() => scrollToSection('projects')} className="block px-3 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md transition-colors duration-200 w-full text-left">
+              <button onClick={() => scrollToSection('projects')} className="block px-3 py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-colors duration-200 w-full text-left">
                 Projects
               </button>
-              <button onClick={() => scrollToSection('contact')} className="block px-3 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md transition-colors duration-200 w-full text-left">
+              <button onClick={() => scrollToSection('contact')} className="block px-3 py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-colors duration-200 w-full text-left">
                 Contact
               </button>
             </div>
@@ -160,7 +163,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 pt-16">
+      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 pt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             {/* Professional Avatar */}
@@ -168,13 +171,13 @@ export default function Home() {
               NK
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-white mb-6">
               Hi, I'm <span className="gradient-text">Nitish Kumar</span>
             </h1>
             
-            <p className="text-xl sm:text-2xl text-slate-600 mb-4 font-medium">Software Engineer</p>
+            <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 mb-4 font-medium">Software Engineer</p>
             
-            <p className="text-lg text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed">
               Results-driven Software Engineer with hands-on experience in building scalable web applications and 
               backend systems using Java, Spring Boot, React.js, and Kafka. Passionate about clean code, design patterns, 
               and delivering high-impact enterprise solutions.
@@ -201,19 +204,19 @@ export default function Home() {
             {/* Social Links */}
             <div className="flex justify-center space-x-6">
               <a href="https://github.com/Nitish-Kumar-kushwaha" target="_blank" rel="noopener noreferrer" 
-                 className="text-slate-600 hover:text-slate-900 transform hover:scale-110 transition-all duration-200">
+                 className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transform hover:scale-110 transition-all duration-200">
                 <Github className="w-6 h-6" />
               </a>
               <a href="https://linkedin.com/in/nitishkumarkushwaha" target="_blank" rel="noopener noreferrer" 
-                 className="text-slate-600 hover:text-blue-600 transform hover:scale-110 transition-all duration-200">
+                 className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transform hover:scale-110 transition-all duration-200">
                 <Linkedin className="w-6 h-6" />
               </a>
               <a href="https://leetcode.com/u/rashu1813/" target="_blank" rel="noopener noreferrer" 
-                 className="text-slate-600 hover:text-orange-500 transform hover:scale-110 transition-all duration-200">
+                 className="text-slate-600 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-400 transform hover:scale-110 transition-all duration-200">
                 <Code className="w-6 h-6" />
               </a>
               <a href="https://geeksforgeeks.org/user/nitishkumarkushwaha1813/" target="_blank" rel="noopener noreferrer" 
-                 className="text-slate-600 hover:text-green-600 transform hover:scale-110 transition-all duration-200">
+                 className="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 transform hover:scale-110 transition-all duration-200">
                 <Laptop className="w-6 h-6" />
               </a>
             </div>
@@ -222,31 +225,31 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white dark:bg-slate-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">About Me</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 dark:text-white mb-4">About Me</h2>
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
               Passionate about building scalable solutions and optimizing system performance
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-on-scroll">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 shadow-xl">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 shadow-xl border border-slate-200 dark:border-slate-700">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
                     NK
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-800 mb-2">Software Engineer</h3>
-                  <p className="text-slate-600">Building enterprise solutions</p>
+                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-2">Software Engineer</h3>
+                  <p className="text-slate-600 dark:text-slate-300">Building enterprise solutions</p>
                 </div>
               </div>
             </div>
 
             <div className="animate-on-scroll">
-              <h3 className="text-2xl font-bold text-slate-800 mb-6">My Journey</h3>
-              <div className="space-y-4 text-slate-600 leading-relaxed">
+              <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6">My Journey</h3>
+              <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
                 <p>
                   I'm a dedicated Software Engineer based in Hyderabad, India, with a strong foundation in full-stack development 
                   and backend architecture. I graduated with a Bachelor's in Computer Science Engineering from KLS Gogte Institute 
@@ -265,30 +268,30 @@ export default function Home() {
 
               {/* Key Achievements */}
               <div className="mt-8">
-                <h4 className="text-lg font-semibold text-slate-800 mb-4">Key Achievements</h4>
+                <h4 className="text-lg font-semibold text-slate-800 dark:text-white mb-4">Key Achievements</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Card className="bg-blue-50 border-blue-200">
+                  <Card className="bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-700">
                     <CardContent className="p-4">
-                      <div className="text-2xl font-bold text-blue-600">10x</div>
-                      <div className="text-sm text-slate-600">API Performance Improvement</div>
+                      <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">10x</div>
+                      <div className="text-sm text-slate-600 dark:text-slate-300">API Performance Improvement</div>
                     </CardContent>
                   </Card>
-                  <Card className="bg-green-50 border-green-200">
+                  <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-700">
                     <CardContent className="p-4">
-                      <div className="text-2xl font-bold text-green-600">40%</div>
-                      <div className="text-sm text-slate-600">Incident Reduction</div>
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">40%</div>
+                      <div className="text-sm text-slate-600 dark:text-slate-300">Incident Reduction</div>
                     </CardContent>
                   </Card>
-                  <Card className="bg-purple-50 border-purple-200">
+                  <Card className="bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-700">
                     <CardContent className="p-4">
-                      <div className="text-2xl font-bold text-purple-600">10K+</div>
-                      <div className="text-sm text-slate-600">Users Served</div>
+                      <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">10K+</div>
+                      <div className="text-sm text-slate-600 dark:text-slate-300">Users Served</div>
                     </CardContent>
                   </Card>
-                  <Card className="bg-orange-50 border-orange-200">
+                  <Card className="bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-700">
                     <CardContent className="p-4">
-                      <div className="text-2xl font-bold text-orange-600">100%</div>
-                      <div className="text-sm text-slate-600">Migration Success</div>
+                      <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">100%</div>
+                      <div className="text-sm text-slate-600 dark:text-slate-300">Migration Success</div>
                     </CardContent>
                   </Card>
                 </div>
@@ -299,11 +302,11 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 bg-slate-50">
+      <section id="experience" className="py-20 bg-slate-50 dark:bg-slate-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Experience</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 dark:text-white mb-4">Experience</h2>
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
               Building enterprise solutions and driving technical excellence
             </p>
           </div>
@@ -908,11 +911,11 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
+      <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Nitish Kumar Kushwaha</h3>
-            <p className="text-slate-400 mb-6">Building the future, one line of code at a time.</p>
+            <p className="text-slate-400 dark:text-slate-300 mb-6">Building the future, one line of code at a time.</p>
             
             <div className="flex justify-center space-x-6 mb-8">
               <a href="https://linkedin.com/in/nitishkumarkushwaha" target="_blank" rel="noopener noreferrer" 
