@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
+import { useCodingStats } from "@/hooks/use-coding-stats";
 import { ModeToggle } from "@/components/mode-toggle";
 import { 
   Mail, 
@@ -24,6 +25,7 @@ import {
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { toast } = useToast();
+  const codingStats = useCodingStats();
 
   // Smooth scroll function
   const scrollToSection = (sectionId: string) => {
@@ -519,23 +521,31 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                      <Code className="w-6 h-6 text-orange-600" />
+                      <svg className="w-6 h-6 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0z"/>
+                      </svg>
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-slate-800">LeetCode</h3>
                       <p className="text-slate-600">@rashu1813</p>
                     </div>
                   </div>
-                  <Badge className="bg-orange-100 text-orange-700 hover:bg-orange-100">Active</Badge>
+                  <Badge className="bg-orange-100 text-orange-700 hover:bg-orange-100">
+                    {codingStats.loading ? 'Loading...' : 'Active'}
+                  </Badge>
                 </div>
 
                 <div className="grid grid-cols-2 gap-6 mb-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-1">49%</div>
+                    <div className="text-3xl font-bold text-green-600 mb-1">
+                      {codingStats.loading ? '...' : `${codingStats.leetcode.acceptanceRate.toFixed(1)}%`}
+                    </div>
                     <div className="text-sm text-slate-600">Acceptance Rate</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-1">716K+</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-1">
+                      {codingStats.loading ? '...' : `${Math.floor(codingStats.leetcode.ranking / 1000)}K+`}
+                    </div>
                     <div className="text-sm text-slate-600">Global Ranking</div>
                   </div>
                 </div>
@@ -545,27 +555,42 @@ export default function Home() {
                     <span className="text-slate-700">Easy</span>
                     <div className="flex items-center">
                       <div className="w-24 h-2 bg-gray-200 rounded-full mr-3">
-                        <div className="w-4 h-2 bg-green-500 rounded-full"></div>
+                        <div 
+                          className="h-2 bg-green-500 rounded-full transition-all duration-500"
+                          style={{ width: `${Math.min((codingStats.leetcode.easySolved / 885) * 100, 100)}%` }}
+                        ></div>
                       </div>
-                      <span className="text-sm font-semibold text-slate-800">53</span>
+                      <span className="text-sm font-semibold text-slate-800">
+                        {codingStats.loading ? '...' : codingStats.leetcode.easySolved}
+                      </span>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Medium</span>
                     <div className="flex items-center">
                       <div className="w-24 h-2 bg-gray-200 rounded-full mr-3">
-                        <div className="w-12 h-2 bg-yellow-500 rounded-full"></div>
+                        <div 
+                          className="h-2 bg-yellow-500 rounded-full transition-all duration-500"
+                          style={{ width: `${Math.min((codingStats.leetcode.mediumSolved / 1877) * 100, 100)}%` }}
+                        ></div>
                       </div>
-                      <span className="text-sm font-semibold text-slate-800">114</span>
+                      <span className="text-sm font-semibold text-slate-800">
+                        {codingStats.loading ? '...' : codingStats.leetcode.mediumSolved}
+                      </span>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Hard</span>
                     <div className="flex items-center">
                       <div className="w-24 h-2 bg-gray-200 rounded-full mr-3">
-                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <div 
+                          className="h-2 bg-red-500 rounded-full transition-all duration-500"
+                          style={{ width: `${Math.min((codingStats.leetcode.hardSolved / 848) * 100, 100)}%` }}
+                        ></div>
                       </div>
-                      <span className="text-sm font-semibold text-slate-800">9</span>
+                      <span className="text-sm font-semibold text-slate-800">
+                        {codingStats.loading ? '...' : codingStats.leetcode.hardSolved}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -573,7 +598,9 @@ export default function Home() {
                 {/* Total Count */}
                 <div className="mt-6 pt-4 border-t border-slate-200">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-slate-800 mb-1">176</div>
+                    <div className="text-2xl font-bold text-slate-800 mb-1">
+                      {codingStats.loading ? '...' : codingStats.leetcode.totalSolved}
+                    </div>
                     <div className="text-sm text-slate-600">Total Problems Solved</div>
                   </div>
                 </div>
@@ -597,8 +624,8 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                      <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 9.739s9-4.189 9-9.739V7l-10-5z"/>
+                      <svg className="w-6 h-6 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                       </svg>
                     </div>
                     <div>
@@ -623,22 +650,30 @@ export default function Home() {
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Data Structures</span>
-                    <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">82 solved</Badge>
+                    <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">
+                      {codingStats.geeksforgeeks.dataStructures} solved
+                    </Badge>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Algorithms</span>
-                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">71 solved</Badge>
+                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">
+                      {codingStats.geeksforgeeks.algorithms} solved
+                    </Badge>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-700">Interview Prep</span>
-                    <Badge className="bg-green-100 text-green-700 hover:bg-green-100">49 solved</Badge>
+                    <Badge className="bg-green-100 text-green-700 hover:bg-green-100">
+                      {codingStats.geeksforgeeks.interviewPrep} solved
+                    </Badge>
                   </div>
                 </div>
 
                 {/* Total Count */}
                 <div className="mt-6 pt-4 border-t border-slate-200">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-slate-800 mb-1">202</div>
+                    <div className="text-2xl font-bold text-slate-800 mb-1">
+                      {codingStats.geeksforgeeks.totalSolved}
+                    </div>
                     <div className="text-sm text-slate-600">Total Problems Solved</div>
                   </div>
                 </div>
@@ -675,9 +710,13 @@ export default function Home() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-blue-600 mb-2">378</div>
+                    <div className="text-4xl font-bold text-blue-600 mb-2">
+                      {codingStats.loading ? '...' : codingStats.combinedTotal}
+                    </div>
                     <div className="text-sm text-slate-600 font-medium">Total Problems Solved</div>
-                    <div className="text-xs text-slate-500 mt-1">LeetCode (176) + GeeksforGeeks (202)</div>
+                    <div className="text-xs text-slate-500 mt-1">
+                      LeetCode ({codingStats.loading ? '...' : codingStats.leetcode.totalSolved}) + GeeksforGeeks ({codingStats.geeksforgeeks.totalSolved})
+                    </div>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold text-green-600 mb-2">2</div>
@@ -685,7 +724,9 @@ export default function Home() {
                     <div className="text-xs text-slate-500 mt-1">Consistent practice across both</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-purple-600 mb-2">52</div>
+                    <div className="text-4xl font-bold text-purple-600 mb-2">
+                      {codingStats.geeksforgeeks.potdStreak}
+                    </div>
                     <div className="text-sm text-slate-600 font-medium">Current POTD Streak</div>
                     <div className="text-xs text-slate-500 mt-1">Daily coding practice</div>
                   </div>
@@ -694,12 +735,19 @@ export default function Home() {
                 <div className="mt-8 pt-6 border-t border-slate-200">
                   <div className="flex justify-center space-x-4">
                     <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 px-4 py-2">
-                      LeetCode: 176 solved
+                      LeetCode: {codingStats.loading ? '...' : codingStats.leetcode.totalSolved} solved
                     </Badge>
                     <Badge className="bg-green-100 text-green-700 hover:bg-green-100 px-4 py-2">
-                      GeeksforGeeks: 202 solved
+                      GeeksforGeeks: {codingStats.geeksforgeeks.totalSolved} solved
                     </Badge>
                   </div>
+                  {codingStats.error && (
+                    <div className="mt-4 text-center">
+                      <div className="text-xs text-amber-600 bg-amber-50 px-3 py-1 rounded-full inline-block">
+                        {codingStats.error}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -719,7 +767,9 @@ export default function Home() {
                     </div>
                     <h4 className="font-semibold text-slate-800">Consistent Solver</h4>
                   </div>
-                  <p className="text-slate-600 text-sm">Maintained daily coding practice with 378 problems solved across platforms</p>
+                  <p className="text-slate-600 text-sm">
+                    Maintained daily coding practice with {codingStats.loading ? '...' : codingStats.combinedTotal} problems solved across platforms
+                  </p>
                 </CardContent>
               </Card>
 
