@@ -19,7 +19,16 @@ import {
   X,
   Send,
   CheckCircle,
-  ExternalLink
+  ExternalLink,
+  Building,
+  Calendar,
+  Heart,
+  Star,
+  Zap,
+  Award,
+  Badge as BadgeIcon,
+  DollarSign,
+  Briefcase
 } from "lucide-react";
 
 export default function Home() {
@@ -223,6 +232,18 @@ export default function Home() {
               </Button>
               <Button 
                 variant="outline"
+                onClick={() => window.open('https://drive.google.com/file/d/19lDcKD0iKz4bW1GEkRpKLHmQaeaaabw0/view?usp=sharing', '_blank')} 
+                className="relative inline-flex items-center px-10 py-4 border-2 border-transparent bg-gradient-to-r from-green-600 to-teal-600 p-0.5 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg group"
+              >
+                <div className="bg-white dark:bg-slate-900 rounded-full px-8 py-3 flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                  <span className="bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">Download Resume</span>
+                </div>
+              </Button>
+              <Button 
+                variant="outline"
                 onClick={() => scrollToSection('experience')} 
                 className="relative inline-flex items-center px-10 py-4 border-2 border-transparent bg-gradient-to-r from-blue-600 to-purple-600 p-0.5 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg group"
               >
@@ -399,27 +420,44 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 bg-slate-50 dark:bg-slate-900">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="experience" className="py-20 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-32 h-32 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 dark:text-white mb-4">Experience</h2>
+            <div className="inline-block mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <Briefcase className="w-8 h-8 text-white" />
+              </div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 dark:text-white mb-4">Professional Experience</h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              Building enterprise solutions and driving technical excellence
+              Building enterprise solutions and driving technical excellence with cutting-edge technologies
             </p>
           </div>
 
           {/* Current Role */}
           <div className="mb-12 animate-on-scroll">
-            <Card className="shadow-lg border border-slate-200">
+            <Card className="shadow-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div>
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-slate-800 mb-2">Software Engineer</h3>
-                    <p className="text-lg text-blue-600 font-semibold mb-2">Zaggle Prepaid Ocean Services Ltd</p>
-                    <p className="text-slate-600">Hyderabad, India</p>
+                  <div className="flex items-center mb-4 lg:mb-0">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                      <Building className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-2">Software Engineer</h3>
+                      <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold mb-2">Zaggle Prepaid Ocean Services Ltd</p>
+                      <p className="text-slate-600 dark:text-slate-400">Hyderabad, India</p>
+                    </div>
                   </div>
                   <div className="mt-4 lg:mt-0">
-                    <Badge className="bg-green-100 text-green-800 hover:bg-green-100">
+                    <Badge className="bg-gradient-to-r from-green-500 to-teal-500 text-white hover:from-green-600 hover:to-teal-600 shadow-md px-4 py-2">
                       Oct 2023 - Present
                     </Badge>
                   </div>
@@ -428,61 +466,76 @@ export default function Home() {
                 {/* Project Sections */}
                 <div className="space-y-8">
                   {/* Travel SVC */}
-                  <div className="border-l-4 border-blue-500 pl-6">
-                    <h4 className="text-xl font-semibold text-slate-800 mb-2">Travel SVC</h4>
-                    <p className="text-sm text-slate-500 mb-4">Oct 2024 - Present</p>
-                    <ul className="space-y-2 text-slate-600">
+                  <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border-l-4 border-blue-500 pl-6 pr-4 py-4 rounded-r-lg">
+                    <div className="flex items-center mb-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3">
+                        <Zap className="w-5 h-5 text-white" />
+                      </div>
+                      <h4 className="text-xl font-semibold text-slate-800 dark:text-white">Travel SVC</h4>
+                    </div>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium">Oct 2024 - Present</p>
+                    <ul className="space-y-3 text-slate-600 dark:text-slate-300">
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                        Architected and implemented a Kafka-based notification service, enabling scalable, real-time alerting across systems
+                        <span>Architected and implemented a <strong className="text-blue-600 dark:text-blue-400">Kafka-based notification service</strong>, enabling scalable, real-time alerting across systems</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                        Orchestrated backend event handling using Kafka for improved system responsiveness and decoupling
+                        <span>Orchestrated backend event handling using <strong className="text-cyan-600 dark:text-cyan-400">Kafka</strong> for improved system responsiveness and decoupling</span>
                       </li>
                     </ul>
                   </div>
 
                   {/* EMS */}
-                  <div className="border-l-4 border-green-500 pl-6">
-                    <h4 className="text-xl font-semibold text-slate-800 mb-2">EMS (Expense Management System)</h4>
-                    <p className="text-sm text-slate-500 mb-4">Oct 2024 - Present</p>
-                    <ul className="space-y-2 text-slate-600">
+                  <div className="bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 border-l-4 border-green-500 pl-6 pr-4 py-4 rounded-r-lg">
+                    <div className="flex items-center mb-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mr-3">
+                        <DollarSign className="w-5 h-5 text-white" />
+                      </div>
+                      <h4 className="text-xl font-semibold text-slate-800 dark:text-white">EMS (Expense Management System)</h4>
+                    </div>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium">Oct 2024 - Present</p>
+                    <ul className="space-y-3 text-slate-600 dark:text-slate-300">
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                        Designed and deployed a high-throughput email service within the EMS platform, reliably serving over 10,000 users
+                        <span>Designed and deployed a <strong className="text-green-600 dark:text-green-400">high-throughput email service</strong> within the EMS platform, reliably serving over <strong className="text-teal-600 dark:text-teal-400">10,000 users</strong></span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                        Diagnosed and resolved critical production issues, reducing incident frequency by over 40%
+                        <span>Diagnosed and resolved critical production issues, reducing incident frequency by over <strong className="text-green-600 dark:text-green-400">40%</strong></span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                        Led the migration of a business-critical module from Ruby on Rails to Spring Boot, boosting performance and reducing technical debt
+                        <span>Led the migration of a business-critical module from <strong className="text-red-600 dark:text-red-400">Ruby on Rails</strong> to <strong className="text-green-600 dark:text-green-400">Spring Boot</strong>, boosting performance and reducing technical debt</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                        Spearheaded API performance optimization efforts, achieving a 10x improvement in response times for key endpoints
+                        <span>Spearheaded API performance optimization efforts, achieving a <strong className="text-teal-600 dark:text-teal-400">10x improvement</strong> in response times for key endpoints</span>
                       </li>
                     </ul>
                   </div>
 
                   {/* Propel */}
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h4 className="text-xl font-semibold text-slate-800 mb-2">Propel (Rewards & Recognition Platform)</h4>
-                    <p className="text-sm text-slate-500 mb-4">Oct 2023 - Oct 2024</p>
-                    <ul className="space-y-2 text-slate-600">
+                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border-l-4 border-purple-500 pl-6 pr-4 py-4 rounded-r-lg">
+                    <div className="flex items-center mb-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-3">
+                        <Award className="w-5 h-5 text-white" />
+                      </div>
+                      <h4 className="text-xl font-semibold text-slate-800 dark:text-white">Propel (Rewards & Recognition Platform)</h4>
+                    </div>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium">Oct 2023 - Oct 2024</p>
+                    <ul className="space-y-3 text-slate-600 dark:text-slate-300">
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                        Delivered comprehensive end-to-end solutions, encompassing both React.js and Redux-Saga for robust UI development
+                        <span>Delivered comprehensive end-to-end solutions, encompassing both <strong className="text-purple-600 dark:text-purple-400">React.js</strong> and <strong className="text-pink-600 dark:text-pink-400">Redux-Saga</strong> for robust UI development</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                        Developed and integrated backend APIs to support dynamic UI functionalities and business workflows
+                        <span>Developed and integrated <strong className="text-purple-600 dark:text-purple-400">backend APIs</strong> to support dynamic UI functionalities and business workflows</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                        Collaborated closely with enterprise clients to understand unique requirements and tailor platform features
+                        <span>Collaborated closely with <strong className="text-pink-600 dark:text-pink-400">enterprise clients</strong> to understand unique requirements and tailor platform features</span>
                       </li>
                     </ul>
                   </div>
@@ -493,35 +546,43 @@ export default function Home() {
 
           {/* Internship */}
           <div className="animate-on-scroll">
-            <Card className="shadow-lg border border-slate-200">
+            <Card className="shadow-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500"></div>
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-slate-800 mb-2">Frontend Developer Intern</h3>
-                    <p className="text-lg text-blue-600 font-semibold mb-2">Zaggle Prepaid Ocean Services Ltd (Prismberry Inc.)</p>
-                    <p className="text-slate-600">Noida, India</p>
+                  <div className="flex items-center mb-4 lg:mb-0">
+                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                      <Code className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-2">Frontend Developer Intern</h3>
+                      <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold mb-2">Zaggle Prepaid Ocean Services Ltd (Prismberry Inc.)</p>
+                      <p className="text-slate-600 dark:text-slate-400">Noida, India</p>
+                    </div>
                   </div>
                   <div className="mt-4 lg:mt-0">
-                    <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
+                    <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600 shadow-md px-4 py-2">
                       Apr 2023 - Sep 2023
                     </Badge>
                   </div>
                 </div>
 
-                <ul className="space-y-2 text-slate-600">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                    Designed and implemented frontend modules for NGIFMS and DNPF platforms using Angular, TypeScript, and RxJS
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                    Delivered dynamic, responsive UI components aligned with financial application standards
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                    Coordinated with backend developers to ensure seamless API consumption and optimised performance
-                  </li>
-                </ul>
+                <div className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-xl border border-orange-200 dark:border-orange-700/30">
+                  <ul className="space-y-3 text-slate-600 dark:text-slate-300">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                      <span>Designed and implemented frontend modules for <strong className="text-orange-600 dark:text-orange-400">NGIFMS</strong> and <strong className="text-red-600 dark:text-red-400">DNPF</strong> platforms using Angular, TypeScript, and RxJS</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                      <span>Delivered dynamic, responsive UI components aligned with <strong className="text-orange-600 dark:text-orange-400">financial application standards</strong></span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                      <span>Coordinated with backend developers to ensure seamless <strong className="text-red-600 dark:text-red-400">API consumption</strong> and optimised performance</span>
+                    </li>
+                  </ul>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -719,7 +780,7 @@ export default function Home() {
 
           {/* Combined Total Card */}
           <div className="mb-12 animate-on-scroll">
-            <Card className="shadow-lg border-2 border-blue-200 bg-gradient-to-r from-blue-50 to-purple-50">
+            <Card className="shadow-lg border-2 border-blue-200 dark:border-blue-700/50 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20">
               <CardContent className="p-8 text-center">
                 <div className="flex items-center justify-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
@@ -759,16 +820,16 @@ export default function Home() {
 
                 <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
                   <div className="flex justify-center space-x-4">
-                    <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 px-4 py-2">
+                    <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 hover:bg-blue-100 px-4 py-2">
                       LeetCode: {codingStats.loading ? '...' : codingStats.leetcode.totalSolved} solved
                     </Badge>
-                    <Badge className="bg-green-100 text-green-700 hover:bg-green-100 px-4 py-2">
+                    <Badge className="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 hover:bg-green-100 px-4 py-2">
                       GeeksforGeeks: {codingStats.geeksforgeeks.totalSolved} solved
                     </Badge>
                   </div>
                   {codingStats.error && (
                     <div className="mt-4 text-center">
-                      <div className="text-xs text-amber-600 bg-amber-50 px-3 py-1 rounded-full inline-block">
+                      <div className="text-xs text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/30 px-3 py-1 rounded-full inline-block">
                         {codingStats.error}
                       </div>
                     </div>
