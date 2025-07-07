@@ -998,90 +998,159 @@ export default function Home() {
             </Card>
 
             {/* Development Tools */}
-            <Card className="bg-gradient-to-br from-orange-50 to-red-50 border-orange-200 animate-on-scroll">
+            <Card className="relative card-hover-effect bg-gradient-to-br from-orange-50 to-red-50 border-orange-200 animate-on-scroll overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-600"></div>
               <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <svg className="w-6 h-6 text-orange-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-                  </svg>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                    </svg>
+                  </div>
                   <h3 className="text-xl font-semibold text-slate-800">Development Tools</h3>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Kafka</span>
-                    <Badge className="bg-orange-100 text-orange-700 hover:bg-orange-100">Advanced</Badge>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Kafka</span>
+                      <span className="text-sm text-slate-500">85%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Git</span>
-                    <Badge className="bg-orange-100 text-orange-700 hover:bg-orange-100">Expert</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Git</span>
+                      <span className="text-sm text-slate-500">95%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Postman</span>
-                    <Badge className="bg-orange-100 text-orange-700 hover:bg-orange-100">Advanced</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Postman</span>
+                      <span className="text-sm text-slate-500">90%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[90%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">AWS S3</span>
-                    <Badge className="bg-orange-100 text-orange-700 hover:bg-orange-100">Intermediate</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">AWS S3</span>
+                      <span className="text-sm text-slate-500">75%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[75%]"></div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Concepts */}
-            <Card className="bg-gradient-to-br from-teal-50 to-cyan-50 border-teal-200 animate-on-scroll">
+            <Card className="relative card-hover-effect bg-gradient-to-br from-teal-50 to-cyan-50 border-teal-200 animate-on-scroll overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-cyan-600"></div>
               <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <svg className="w-6 h-6 text-teal-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
                   <h3 className="text-xl font-semibold text-slate-800">Concepts</h3>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Microservices</span>
-                    <Badge className="bg-teal-100 text-teal-700 hover:bg-teal-100">Expert</Badge>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Microservices</span>
+                      <span className="text-sm text-slate-500">95%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">RESTful APIs</span>
-                    <Badge className="bg-teal-100 text-teal-700 hover:bg-teal-100">Expert</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">RESTful APIs</span>
+                      <span className="text-sm text-slate-500">95%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Design Patterns</span>
-                    <Badge className="bg-teal-100 text-teal-700 hover:bg-teal-100">Advanced</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Design Patterns</span>
+                      <span className="text-sm text-slate-500">85%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Data Structures</span>
-                    <Badge className="bg-teal-100 text-teal-700 hover:bg-teal-100">Advanced</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Data Structures</span>
+                      <span className="text-sm text-slate-500">90%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[90%]"></div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Operating Systems */}
-            <Card className="bg-gradient-to-br from-gray-50 to-slate-50 border-gray-200 animate-on-scroll">
+            <Card className="relative card-hover-effect bg-gradient-to-br from-gray-50 to-slate-50 border-gray-200 animate-on-scroll overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-500 to-slate-600"></div>
               <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <svg className="w-6 h-6 text-gray-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
-                  </svg>
-                  <h3 className="text-xl font-semibold text-slate-800">Operating Systems</h3>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-gray-500 to-slate-600 rounded-lg flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-slate-800">Tools & Systems</h3>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Linux (Ubuntu)</span>
-                    <Badge className="bg-gray-100 text-gray-700 hover:bg-gray-100">Advanced</Badge>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Linux (Ubuntu)</span>
+                      <span className="text-sm text-slate-500">85%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Windows</span>
-                    <Badge className="bg-gray-100 text-gray-700 hover:bg-gray-100">Expert</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Windows</span>
+                      <span className="text-sm text-slate-500">95%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Cloud Watch</span>
-                    <Badge className="bg-gray-100 text-gray-700 hover:bg-gray-100">Intermediate</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Cloud Watch</span>
+                      <span className="text-sm text-slate-500">70%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[70%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Agile</span>
-                    <Badge className="bg-gray-100 text-gray-700 hover:bg-gray-100">Advanced</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Agile</span>
+                      <span className="text-sm text-slate-500">85%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -1112,138 +1181,131 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="projects" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-pink-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Featured Projects</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Showcase of my recent work and personal projects
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 dark:text-white mb-4">Featured Projects</h2>
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              Showcase of my recent work and personal projects that demonstrate my skills
             </p>
           </div>
 
           {/* Project Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Mobile Bazzar Project */}
-            <Card className="shadow-lg border border-slate-200 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
-              <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-16 h-16 text-blue-600 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zM14 21h-4v-1h4v1zm3.25-3H6.75V4h10.5v14z"/>
-                  </svg>
-                  <p className="text-blue-700 font-medium">Mobile E-Commerce</p>
+            <Card className="group relative card-hover-effect shadow-2xl border border-slate-200 dark:border-slate-700 animate-on-scroll overflow-hidden bg-white dark:bg-slate-800">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-800/30 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 group-hover:scale-110 transition-transform duration-500"></div>
+                <div className="text-center relative z-10">
+                  <div className="w-20 h-20 mx-auto mb-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zM14 21h-4v-1h4v1zm3.25-3H6.75V4h10.5v14z"/>
+                    </svg>
+                  </div>
+                  <p className="text-blue-700 dark:text-blue-300 font-semibold">Mobile E-Commerce</p>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Mobile Bazzar</h3>
-                <p className="text-slate-600 mb-4">Dynamic e-commerce platform for mobile products with advanced search, sorting, detailed product views, and seamless cart functionality. Built with modern React.js and Next.js.</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">React.js</Badge>
-                  <Badge className="bg-black text-white hover:bg-gray-800">Next.js</Badge>
-                  <Badge className="bg-blue-600 text-white hover:bg-blue-700">TypeScript</Badge>
+              <CardContent className="p-6 relative">
+                <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-3 group-hover:text-blue-600 transition-colors duration-300">Mobile Bazzar</h3>
+                <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm leading-relaxed">Dynamic e-commerce platform for mobile products with advanced search, sorting, detailed product views, and seamless cart functionality. Built with modern React.js and Next.js.</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <Badge className="bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-200">React.js</Badge>
+                  <Badge className="bg-gradient-to-r from-gray-800 to-black text-white hover:from-black hover:to-gray-900 transition-all duration-200">Next.js</Badge>
+                  <Badge className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-200">TypeScript</Badge>
                 </div>
                 <div className="flex justify-between items-center">
-                  <div className="flex space-x-2">
-                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
-                      <a href="https://mobile-bazzar.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Live Demo <ExternalLink className="w-3 h-3 ml-1" />
-                      </a>
-                    </Button>
-                    <span className="text-slate-400">|</span>
-                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
-                      <a href="https://github.com/Nitish-Kumar-kushwaha/MobileBazzar" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Code <ExternalLink className="w-3 h-3 ml-1" />
-                      </a>
-                    </Button>
-                  </div>
-                  <Button variant="ghost" size="sm" className="text-slate-600 hover:text-slate-800 p-0">
-                    <a href="https://github.com/Nitish-Kumar-kushwaha/MobileBazzar" target="_blank" rel="noopener noreferrer">
-                      <Github className="w-5 h-5" />
+                  <div className="flex space-x-3">
+                    <a href="https://mobile-bazzar.vercel.app/" target="_blank" rel="noopener noreferrer" 
+                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium rounded-full hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                      Live Demo <ExternalLink className="w-3 h-3 ml-1" />
                     </a>
-                  </Button>
+                    <a href="https://github.com/Nitish-Kumar-kushwaha/MobileBazzar" target="_blank" rel="noopener noreferrer" 
+                       className="inline-flex items-center px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm font-medium rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 transform hover:scale-105 transition-all duration-200">
+                      <Github className="w-3 h-3 mr-1" /> Code
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Pokemon Project */}
-            <Card className="shadow-lg border border-slate-200 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
-              <div className="h-48 bg-gradient-to-br from-red-100 to-yellow-200 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-16 h-16 text-red-600 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10Z"/>
-                  </svg>
-                  <p className="text-red-700 font-medium">Pokemon Explorer</p>
+            <Card className="group relative card-hover-effect shadow-2xl border border-slate-200 dark:border-slate-700 animate-on-scroll overflow-hidden bg-white dark:bg-slate-800">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="h-48 bg-gradient-to-br from-red-100 to-yellow-200 dark:from-red-900/30 dark:to-yellow-800/30 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-yellow-500/20 group-hover:scale-110 transition-transform duration-500"></div>
+                <div className="text-center relative z-10">
+                  <div className="w-20 h-20 mx-auto mb-3 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10Z"/>
+                    </svg>
+                  </div>
+                  <p className="text-red-700 dark:text-red-300 font-semibold">Pokemon Explorer</p>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Pokemon</h3>
-                <p className="text-slate-600 mb-4">Explore Pokémon types with ease! Features detailed descriptions, seamless pagination, and captivating interface. Powered by Next.js for quick loading and React for interactivity.</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">React</Badge>
-                  <Badge className="bg-black text-white hover:bg-gray-800">Next.js</Badge>
-                  <Badge className="bg-blue-600 text-white hover:bg-blue-700">TypeScript</Badge>
+              <CardContent className="p-6 relative">
+                <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-3 group-hover:text-red-600 transition-colors duration-300">Pokemon Explorer</h3>
+                <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm leading-relaxed">Explore Pokémon types with ease! Features detailed descriptions, seamless pagination, and captivating interface. Powered by Next.js for quick loading and React for interactivity.</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <Badge className="bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-200">React</Badge>
+                  <Badge className="bg-gradient-to-r from-gray-800 to-black text-white hover:from-black hover:to-gray-900 transition-all duration-200">Next.js</Badge>
+                  <Badge className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-200">TypeScript</Badge>
                 </div>
                 <div className="flex justify-between items-center">
-                  <div className="flex space-x-2">
-                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
-                      <a href="https://portfolio-portal-4dxv.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Live Demo <ExternalLink className="w-3 h-3 ml-1" />
-                      </a>
-                    </Button>
-                    <span className="text-slate-400">|</span>
-                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
-                      <a href="https://github.com/Nitish-Kumar-kushwaha/Pokemon" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Code <ExternalLink className="w-3 h-3 ml-1" />
-                      </a>
-                    </Button>
-                  </div>
-                  <Button variant="ghost" size="sm" className="text-slate-600 hover:text-slate-800 p-0">
-                    <a href="https://github.com/Nitish-Kumar-kushwaha/Pokemon" target="_blank" rel="noopener noreferrer">
-                      <Github className="w-5 h-5" />
+                  <div className="flex space-x-3">
+                    <a href="https://portfolio-portal-4dxv.vercel.app/" target="_blank" rel="noopener noreferrer" 
+                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500 to-yellow-500 text-white text-sm font-medium rounded-full hover:from-red-600 hover:to-yellow-600 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                      Live Demo <ExternalLink className="w-3 h-3 ml-1" />
                     </a>
-                  </Button>
+                    <a href="https://github.com/Nitish-Kumar-kushwaha/Pokemon" target="_blank" rel="noopener noreferrer" 
+                       className="inline-flex items-center px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm font-medium rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 transform hover:scale-105 transition-all duration-200">
+                      <Github className="w-3 h-3 mr-1" /> Code
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Sporty Shoes Project */}
-            <Card className="shadow-lg border border-slate-200 hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
-              <div className="h-48 bg-gradient-to-br from-green-100 to-blue-200 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-16 h-16 text-green-600 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M2,18H7V20H17V18H22L20,8H19V7A2,2 0 0,0 17,5H7A2,2 0 0,0 5,7V8H4L2,18M7,7H17V8H7V7M4.5,10H19.5L18.5,16H5.5L4.5,10Z"/>
-                  </svg>
-                  <p className="text-green-700 font-medium">Shoe Store</p>
+            <Card className="group relative card-hover-effect shadow-2xl border border-slate-200 dark:border-slate-700 animate-on-scroll overflow-hidden bg-white dark:bg-slate-800">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="h-48 bg-gradient-to-br from-green-100 to-blue-200 dark:from-green-900/30 dark:to-blue-800/30 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-500/20 group-hover:scale-110 transition-transform duration-500"></div>
+                <div className="text-center relative z-10">
+                  <div className="w-20 h-20 mx-auto mb-3 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M2,18H7V20H17V18H22L20,8H19V7A2,2 0 0,0 17,5H7A2,2 0 0,0 5,7V8H4L2,18M7,7H17V8H7V7M4.5,10H19.5L18.5,16H5.5L4.5,10Z"/>
+                    </svg>
+                  </div>
+                  <p className="text-green-700 dark:text-green-300 font-semibold">Full-Stack E-Commerce</p>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Sporty Shoes</h3>
-                <p className="text-slate-600 mb-4">Full-stack sporty shoe e-commerce web app with sleek Next.js & React.js frontend, robust Spring Boot backend. TypeScript ensures bug-resistant, reliable codebase.</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">React.js</Badge>
-                  <Badge className="bg-black text-white hover:bg-gray-800">Next.js</Badge>
-                  <Badge className="bg-green-600 text-white hover:bg-green-700">Spring Boot</Badge>
-                  <Badge className="bg-orange-500 text-white hover:bg-orange-600">Java</Badge>
-                  <Badge className="bg-blue-600 text-white hover:bg-blue-700">TypeScript</Badge>
+              <CardContent className="p-6 relative">
+                <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-3 group-hover:text-green-600 transition-colors duration-300">Sporty Shoes</h3>
+                <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm leading-relaxed">Full-stack sporty shoe e-commerce web app with sleek Next.js & React.js frontend, robust Spring Boot backend. TypeScript ensures bug-resistant, reliable codebase.</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <Badge className="bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-200">React.js</Badge>
+                  <Badge className="bg-gradient-to-r from-gray-800 to-black text-white hover:from-black hover:to-gray-900 transition-all duration-200">Next.js</Badge>
+                  <Badge className="bg-gradient-to-r from-green-600 to-green-700 text-white hover:from-green-700 hover:to-green-800 transition-all duration-200">Spring Boot</Badge>
+                  <Badge className="bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-200">Java</Badge>
+                  <Badge className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-200">TypeScript</Badge>
                 </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-2">
-                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
-                      <a href="https://github.com/Nitish-Kumar-kushwaha/sportyshoes" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Frontend <ExternalLink className="w-3 h-3 ml-1" />
-                      </a>
-                    </Button>
-                    <span className="text-slate-400">|</span>
-                    <Button variant="link" className="text-blue-600 hover:text-blue-700 font-medium p-0 text-sm">
-                      <a href="https://github.com/Nitish-Kumar-kushwaha/sport-shoes" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Backend <ExternalLink className="w-3 h-3 ml-1" />
-                      </a>
-                    </Button>
-                  </div>
-                  <Button variant="ghost" size="sm" className="text-slate-600 hover:text-slate-800 p-0">
-                    <a href="https://github.com/Nitish-Kumar-kushwaha/sportyshoes" target="_blank" rel="noopener noreferrer">
-                      <Github className="w-5 h-5" />
-                    </a>
-                  </Button>
+                <div className="flex flex-wrap gap-3">
+                  <a href="https://github.com/Nitish-Kumar-kushwaha/sportyshoes" target="_blank" rel="noopener noreferrer" 
+                     className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white text-sm font-medium rounded-full hover:from-green-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                    Frontend <ExternalLink className="w-3 h-3 ml-1" />
+                  </a>
+                  <a href="https://github.com/Nitish-Kumar-kushwaha/sport-shoes" target="_blank" rel="noopener noreferrer" 
+                     className="inline-flex items-center px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm font-medium rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 transform hover:scale-105 transition-all duration-200">
+                    <Github className="w-3 h-3 mr-1" /> Backend
+                  </a>
                 </div>
               </CardContent>
             </Card>
