@@ -248,22 +248,77 @@ export default function Home() {
             </div>
 
             <div className="animate-on-scroll">
-              <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6">My Journey</h3>
-              <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
-                <p>
-                  I'm a dedicated Software Engineer based in Hyderabad, India, with a strong foundation in full-stack development 
-                  and backend architecture. I graduated with a Bachelor's in Computer Science Engineering from KLS Gogte Institute 
-                  of Technology with a CGPA of 9.05/10.0.
-                </p>
-                <p>
-                  Currently working at Zaggle Prepaid Ocean Services Ltd, I've contributed to multiple enterprise platforms 
-                  including Travel SVC, EMS (Expense Management System), and Propel (Rewards & Recognition Platform). 
-                  My work focuses on building scalable microservices, optimizing system performance, and delivering robust solutions.
-                </p>
-                <p>
-                  I'm passionate about clean code, design patterns, and continuous learning. I believe in writing maintainable, 
-                  efficient code that scales with business growth and user demands.
-                </p>
+              <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-8">My Journey</h3>
+              
+              {/* Journey Timeline */}
+              <div className="space-y-8">
+                {/* Education */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.84L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold text-slate-800 dark:text-white mb-2">Academic Excellence</h4>
+                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                      Graduated with a <span className="font-semibold text-blue-600 dark:text-blue-400">Bachelor's in Computer Science Engineering</span> from 
+                      <span className="font-medium"> KLS Gogte Institute of Technology</span> with an outstanding 
+                      <span className="font-semibold text-green-600 dark:text-green-400"> CGPA of 9.05/10.0</span>, 
+                      building a strong foundation in full-stack development and backend architecture.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Professional Experience */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd"/>
+                      <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold text-slate-800 dark:text-white mb-2">Enterprise Impact</h4>
+                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                      Currently driving innovation at <span className="font-semibold text-blue-600 dark:text-blue-400">Zaggle Prepaid Ocean Services Ltd</span>, 
+                      where I've made significant contributions to multiple enterprise platforms including 
+                      <span className="font-medium"> Travel SVC, EMS (Expense Management System), and Propel (Rewards & Recognition Platform)</span>. 
+                      My expertise lies in building scalable microservices and optimizing system performance for real-world impact.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Philosophy & Passion */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold text-slate-800 dark:text-white mb-2">Core Philosophy</h4>
+                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                      Passionate about <span className="font-semibold text-purple-600 dark:text-purple-400">clean code, design patterns, and continuous learning</span>. 
+                      I believe in crafting maintainable, efficient solutions that not only meet today's requirements but scale seamlessly with 
+                      business growth and evolving user demands. Every line of code is an opportunity to build something better.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Location & Availability */}
+                <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-slate-200 dark:border-slate-700">
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <span className="text-slate-800 dark:text-white font-medium">
+                      Based in Hyderabad, India
+                    </span>
+                    <span className="text-slate-600 dark:text-slate-300">•</span>
+                    <span className="text-green-600 dark:text-green-400 font-medium">
+                      Open to opportunities
+                    </span>
+                  </div>
+                </div>
               </div>
 
               {/* Key Achievements */}
