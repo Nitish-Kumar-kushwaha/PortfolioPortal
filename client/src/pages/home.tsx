@@ -180,19 +180,31 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 pt-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        {/* Dynamic Background */}
+        <div className="absolute inset-0 gradient-bg opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 to-purple-50/80 dark:from-slate-900/90 dark:to-slate-800/90"></div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 dark:bg-blue-800 rounded-full opacity-20 floating-animation"></div>
+        <div className="absolute bottom-32 right-16 w-16 h-16 bg-purple-200 dark:bg-purple-800 rounded-full opacity-20 floating-animation" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-20 w-12 h-12 bg-pink-200 dark:bg-pink-800 rounded-full opacity-20 floating-animation" style={{animationDelay: '4s'}}></div>
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="animate-fade-in">
-            {/* Professional Avatar */}
-            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-              NK
+            {/* Enhanced Professional Avatar */}
+            <div className="w-40 h-40 mx-auto mb-8 rounded-full gradient-bg flex items-center justify-center text-white text-5xl font-bold shadow-2xl pulse-glow relative">
+              <div className="absolute inset-2 rounded-full bg-white/10 backdrop-blur-sm"></div>
+              <span className="relative z-10">NK</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-slate-800 dark:text-white mb-6 leading-tight">
               Hi, I'm <span className="gradient-text">Nitish Kumar</span>
             </h1>
             
-            <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 mb-4 font-medium">Software Engineer</p>
+            <div className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 mb-4 font-medium">
+              <span className="typing-animation">Software Engineer & Full-Stack Developer</span>
+            </div>
             
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed">
               Results-driven Software Engineer with hands-on experience in building scalable web applications and 
@@ -200,41 +212,48 @@ export default function Home() {
               and delivering high-impact enterprise solutions.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
               <Button 
                 onClick={() => scrollToSection('contact')} 
-                className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
+                className="relative inline-flex items-center px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl overflow-hidden group"
               >
-                <Mail className="w-4 h-4 mr-2" />
-                Get In Touch
+                <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <Mail className="w-5 h-5 mr-2 relative z-10" />
+                <span className="relative z-10">Get In Touch</span>
               </Button>
               <Button 
                 variant="outline"
                 onClick={() => scrollToSection('experience')} 
-                className="inline-flex items-center px-8 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transform hover:scale-105 transition-all duration-200"
+                className="relative inline-flex items-center px-10 py-4 border-2 border-transparent bg-gradient-to-r from-blue-600 to-purple-600 p-0.5 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg group"
               >
-                <Code className="w-4 h-4 mr-2" />
-                View My Work
+                <div className="bg-white dark:bg-slate-900 rounded-full px-8 py-3 flex items-center">
+                  <Code className="w-5 h-5 mr-2 text-blue-600" />
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">View My Work</span>
+                </div>
               </Button>
             </div>
 
-            {/* Social Links */}
-            <div className="flex justify-center space-x-6">
+            {/* Enhanced Social Links */}
+            <div className="flex justify-center space-x-8">
               <a href="https://github.com/Nitish-Kumar-kushwaha" target="_blank" rel="noopener noreferrer" 
-                 className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transform hover:scale-110 transition-all duration-200">
-                <Github className="w-6 h-6" />
+                 className="group relative p-4 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-full border border-white/20 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <Github className="w-7 h-7 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-500 to-gray-700 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </a>
               <a href="https://linkedin.com/in/nitishkumarkushwaha" target="_blank" rel="noopener noreferrer" 
-                 className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transform hover:scale-110 transition-all duration-200">
-                <Linkedin className="w-6 h-6" />
+                 className="group relative p-4 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-full border border-white/20 dark:border-slate-700/50 hover:border-blue-300 dark:hover:border-blue-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <Linkedin className="w-7 h-7 text-slate-600 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </a>
               <a href="https://leetcode.com/u/rashu1813/" target="_blank" rel="noopener noreferrer" 
-                 className="text-slate-600 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-400 transform hover:scale-110 transition-all duration-200">
-                <Code className="w-6 h-6" />
+                 className="group relative p-4 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-full border border-white/20 dark:border-slate-700/50 hover:border-orange-300 dark:hover:border-orange-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <Code className="w-7 h-7 text-slate-600 dark:text-slate-400 group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </a>
               <a href="https://geeksforgeeks.org/user/nitishkumarkushwaha1813/" target="_blank" rel="noopener noreferrer" 
-                 className="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 transform hover:scale-110 transition-all duration-200">
-                <Laptop className="w-6 h-6" />
+                 className="group relative p-4 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-full border border-white/20 dark:border-slate-700/50 hover:border-green-300 dark:hover:border-green-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <Laptop className="w-7 h-7 text-slate-600 dark:text-slate-400 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-green-700 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </a>
             </div>
           </div>
@@ -253,13 +272,20 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-on-scroll">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 shadow-xl border border-slate-200 dark:border-slate-700">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
-                    NK
+              <div className="relative card-hover-effect bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+                <div className="text-center relative">
+                  <div className="w-28 h-28 mx-auto mb-6 rounded-full gradient-bg flex items-center justify-center text-white text-2xl font-bold shadow-lg pulse-glow">
+                    <div className="absolute inset-2 rounded-full bg-white/10 backdrop-blur-sm"></div>
+                    <span className="relative z-10">NK</span>
                   </div>
                   <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-2">Software Engineer</h3>
-                  <p className="text-slate-600 dark:text-slate-300">Building enterprise solutions</p>
+                  <p className="text-slate-600 dark:text-slate-300">Building enterprise solutions with passion and precision</p>
+                  <div className="flex justify-center space-x-2 mt-4">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                    <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -817,86 +843,155 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Programming Languages */}
-            <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200 animate-on-scroll">
+            <Card className="relative card-hover-effect bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200 animate-on-scroll overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
               <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <Code className="w-6 h-6 text-blue-600 mr-3" />
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
+                    <Code className="w-6 h-6 text-white" />
+                  </div>
                   <h3 className="text-xl font-semibold text-slate-800">Programming Languages</h3>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Java</span>
-                    <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">Expert</Badge>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Java</span>
+                      <span className="text-sm text-slate-500">95%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">JavaScript</span>
-                    <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">Advanced</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">JavaScript</span>
+                      <span className="text-sm text-slate-500">90%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[90%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">TypeScript</span>
-                    <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">Advanced</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">TypeScript</span>
+                      <span className="text-sm text-slate-500">85%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Ruby</span>
-                    <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">Intermediate</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Ruby</span>
+                      <span className="text-sm text-slate-500">75%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[75%]"></div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Frameworks */}
-            <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 animate-on-scroll">
+            <Card className="relative card-hover-effect bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 animate-on-scroll overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-600"></div>
               <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <Laptop className="w-6 h-6 text-green-600 mr-3" />
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-4">
+                    <Laptop className="w-6 h-6 text-white" />
+                  </div>
                   <h3 className="text-xl font-semibold text-slate-800">Frameworks</h3>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Spring Boot</span>
-                    <Badge className="bg-green-100 text-green-700 hover:bg-green-100">Expert</Badge>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Spring Boot</span>
+                      <span className="text-sm text-slate-500">95%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">React.js</span>
-                    <Badge className="bg-green-100 text-green-700 hover:bg-green-100">Advanced</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">React.js</span>
+                      <span className="text-sm text-slate-500">90%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[90%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Angular</span>
-                    <Badge className="bg-green-100 text-green-700 hover:bg-green-100">Advanced</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Angular</span>
+                      <span className="text-sm text-slate-500">85%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">Redux-Saga</span>
-                    <Badge className="bg-green-100 text-green-700 hover:bg-green-100">Intermediate</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">Redux-Saga</span>
+                      <span className="text-sm text-slate-500">80%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[80%]"></div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Databases */}
-            <Card className="bg-gradient-to-br from-purple-50 to-violet-50 border-purple-200 animate-on-scroll">
+            <Card className="relative card-hover-effect bg-gradient-to-br from-purple-50 to-violet-50 border-purple-200 animate-on-scroll overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-violet-600"></div>
               <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <svg className="w-6 h-6 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                  </svg>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                    </svg>
+                  </div>
                   <h3 className="text-xl font-semibold text-slate-800">Databases</h3>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">PostgreSQL</span>
-                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">Advanced</Badge>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">PostgreSQL</span>
+                      <span className="text-sm text-slate-500">90%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[90%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">SQL</span>
-                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">Expert</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">SQL</span>
+                      <span className="text-sm text-slate-500">95%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[95%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">JPA</span>
-                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">Advanced</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">JPA</span>
+                      <span className="text-sm text-slate-500">85%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-700">DBMS</span>
-                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">Advanced</Badge>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-slate-700 font-medium">DBMS</span>
+                      <span className="text-sm text-slate-500">85%</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2">
+                      <div className="skill-bar h-2 rounded-full w-[85%]"></div>
+                    </div>
                   </div>
                 </div>
               </CardContent>

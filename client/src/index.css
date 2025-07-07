@@ -81,13 +81,13 @@
 
 @layer components {
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.8s ease-out forwards;
   }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -96,10 +96,88 @@
   }
 
   .gradient-text {
-    background: linear-gradient(to right, var(--blue-600), var(--primary));
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+    to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.3); }
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: 400% 400%;
+    animation: gradient-flow 8s ease infinite;
+  }
+
+  @keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .card-hover-effect {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+  }
+
+  .card-hover-effect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .card-hover-effect:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .typing-animation {
+    overflow: hidden;
+    border-right: 0.15em solid #667eea;
+    white-space: nowrap;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #667eea; }
+  }
+
+  .skill-bar {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+
+  .skill-bar:hover {
+    transform: scaleY(1.1);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
   }
 
   /* Dark mode text colors */
