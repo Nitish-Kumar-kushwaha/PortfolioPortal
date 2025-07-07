@@ -236,22 +236,22 @@ export default function Home() {
             {/* Enhanced Social Links */}
             <div className="flex justify-center space-x-8">
               <a href="https://github.com/Nitish-Kumar-kushwaha" target="_blank" rel="noopener noreferrer" 
-                 className="group relative p-4 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-full border border-white/20 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                 className="group relative p-4 bg-white/20 dark:bg-slate-800/70 rounded-full border border-white/30 dark:border-slate-700/70 hover:border-slate-300 dark:hover:border-slate-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
                 <Github className="w-7 h-7 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-500 to-gray-700 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </a>
               <a href="https://linkedin.com/in/nitishkumarkushwaha" target="_blank" rel="noopener noreferrer" 
-                 className="group relative p-4 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-full border border-white/20 dark:border-slate-700/50 hover:border-blue-300 dark:hover:border-blue-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                 className="group relative p-4 bg-white/20 dark:bg-slate-800/70 rounded-full border border-white/30 dark:border-slate-700/70 hover:border-blue-300 dark:hover:border-blue-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
                 <Linkedin className="w-7 h-7 text-slate-600 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </a>
               <a href="https://leetcode.com/u/rashu1813/" target="_blank" rel="noopener noreferrer" 
-                 className="group relative p-4 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-full border border-white/20 dark:border-slate-700/50 hover:border-orange-300 dark:hover:border-orange-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                 className="group relative p-4 bg-white/20 dark:bg-slate-800/70 rounded-full border border-white/30 dark:border-slate-700/70 hover:border-orange-300 dark:hover:border-orange-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
                 <Code className="w-7 h-7 text-slate-600 dark:text-slate-400 group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </a>
               <a href="https://geeksforgeeks.org/user/nitishkumarkushwaha1813/" target="_blank" rel="noopener noreferrer" 
-                 className="group relative p-4 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-full border border-white/20 dark:border-slate-700/50 hover:border-green-300 dark:hover:border-green-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                 className="group relative p-4 bg-white/20 dark:bg-slate-800/70 rounded-full border border-white/30 dark:border-slate-700/70 hover:border-green-300 dark:hover:border-green-600 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
                 <Laptop className="w-7 h-7 text-slate-600 dark:text-slate-400 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-green-700 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </a>
@@ -276,7 +276,6 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div>
                 <div className="text-center relative">
                   <div className="w-28 h-28 mx-auto mb-6 rounded-full gradient-bg flex items-center justify-center text-white text-2xl font-bold shadow-lg pulse-glow">
-                    <div className="absolute inset-2 rounded-full bg-white/10 backdrop-blur-sm"></div>
                     <span className="relative z-10">NK</span>
                   </div>
                   <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-2">Software Engineer</h3>
@@ -622,12 +621,12 @@ export default function Home() {
                 </div>
 
                 {/* Total Count */}
-                <div className="mt-6 pt-4 border-t border-slate-200">
+                <div className="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-slate-800 mb-1">
+                    <div className="text-2xl font-bold text-slate-800 dark:text-white mb-1">
                       {codingStats.loading ? '...' : codingStats.leetcode.totalSolved}
                     </div>
-                    <div className="text-sm text-slate-600">Total Problems Solved</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400">Total Problems Solved</div>
                   </div>
                 </div>
 
@@ -695,12 +694,12 @@ export default function Home() {
                 </div>
 
                 {/* Total Count */}
-                <div className="mt-6 pt-4 border-t border-slate-200">
+                <div className="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-slate-800 mb-1">
+                    <div className="text-2xl font-bold text-slate-800 dark:text-white mb-1">
                       {codingStats.geeksforgeeks.totalSolved}
                     </div>
-                    <div className="text-sm text-slate-600">Total Problems Solved</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400">Total Problems Solved</div>
                   </div>
                 </div>
 
@@ -729,8 +728,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-slate-800">Total Problem Solving</h3>
-                    <p className="text-slate-600">Combined Platform Statistics</p>
+                    <h3 className="text-2xl font-bold text-slate-800 dark:text-white">Total Problem Solving</h3>
+                    <p className="text-slate-600 dark:text-slate-400">Combined Platform Statistics</p>
                   </div>
                 </div>
 
@@ -739,26 +738,26 @@ export default function Home() {
                     <div className="text-4xl font-bold text-blue-600 mb-2">
                       {codingStats.loading ? '...' : codingStats.combinedTotal}
                     </div>
-                    <div className="text-sm text-slate-600 font-medium">Total Problems Solved</div>
-                    <div className="text-xs text-slate-500 mt-1">
+                    <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">Total Problems Solved</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-500 mt-1">
                       LeetCode ({codingStats.loading ? '...' : codingStats.leetcode.totalSolved}) + GeeksforGeeks ({codingStats.geeksforgeeks.totalSolved})
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold text-green-600 mb-2">2</div>
-                    <div className="text-sm text-slate-600 font-medium">Active Platforms</div>
-                    <div className="text-xs text-slate-500 mt-1">Consistent practice across both</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">Active Platforms</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-500 mt-1">Consistent practice across both</div>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold text-purple-600 mb-2">
                       {codingStats.geeksforgeeks.potdStreak}
                     </div>
-                    <div className="text-sm text-slate-600 font-medium">Current POTD Streak</div>
-                    <div className="text-xs text-slate-500 mt-1">Daily coding practice</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">Current POTD Streak</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-500 mt-1">Daily coding practice</div>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-slate-200">
+                <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
                   <div className="flex justify-center space-x-4">
                     <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 px-4 py-2">
                       LeetCode: {codingStats.loading ? '...' : codingStats.leetcode.totalSolved} solved
@@ -781,49 +780,49 @@ export default function Home() {
 
           {/* Key Achievements */}
           <div className="animate-on-scroll">
-            <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Key Achievements</h3>
+            <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-8 text-center">Key Achievements</h3>
             <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-l-yellow-500">
+              <Card className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border-l-4 border-l-yellow-500">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="w-10 h-10 bg-yellow-100 dark:bg-yellow-900/50 rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-5 h-5 text-yellow-600 dark:text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                       </svg>
                     </div>
-                    <h4 className="font-semibold text-slate-800">Consistent Solver</h4>
+                    <h4 className="font-semibold text-slate-800 dark:text-white">Consistent Solver</h4>
                   </div>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">
                     Maintained daily coding practice with {codingStats.loading ? '...' : codingStats.combinedTotal} problems solved across platforms
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-l-blue-500">
+              <Card className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-l-4 border-l-blue-500">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-5 h-5 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <h4 className="font-semibold text-slate-800">Algorithm Expert</h4>
+                    <h4 className="font-semibold text-slate-800 dark:text-white">Algorithm Expert</h4>
                   </div>
-                  <p className="text-slate-600 text-sm">Strong foundation in DSA with focus on trees, graphs, and dynamic programming</p>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">Strong foundation in DSA with focus on trees, graphs, and dynamic programming</p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-r from-green-50 to-teal-50 border-l-4 border-l-green-500">
+              <Card className="bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 border-l-4 border-l-green-500">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="w-10 h-10 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <h4 className="font-semibold text-slate-800">Interview Ready</h4>
+                    <h4 className="font-semibold text-slate-800 dark:text-white">Interview Ready</h4>
                   </div>
-                  <p className="text-slate-600 text-sm">Solved company-specific problems and maintained high acceptance rates</p>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">Solved company-specific problems and maintained high acceptance rates</p>
                 </CardContent>
               </Card>
             </div>
